@@ -1,0 +1,19 @@
+.TestTube {
+  width: 60px;
+  height: 230px;
+  border: 4px solid white;
+  margin: 5px;
+  border-radius: 30px;
+}
+
+.active {
+  background-color: rgba(255, 171, 64, 0.65);
+}
+
+.TestTube .BallWrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  align-items: center;
+}
