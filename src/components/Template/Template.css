@@ -5,3 +5,11 @@
   justify-content: space-around;
   align-items: center;
 }
+
+.Template .TestTubesWrapper {
+  flex-grow: 1;
+}
+
+.Template .SidepanelWrapper {
+  flex-grow: 0;
+}
