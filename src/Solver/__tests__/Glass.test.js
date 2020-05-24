@@ -34,6 +34,13 @@ test("full glass -> isFull = true", () => {
   expect(glass.isFull()).toBe(true);
 });
 
+test("size returns number of balls in the glass", () => {
+  const glass = new Glass();
+  glass.push(0);
+  glass.push(1);
+  expect(glass.size()).toBe(2);
+});
+
 test("call top on empty glass throws an exception", () => {
   const glass = new Glass();
   expect(() => {

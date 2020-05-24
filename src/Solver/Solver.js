@@ -21,6 +21,10 @@ class GraphNode extends AbstractGraphNode {
     const neighbors = board
       .calculateAllPotentialMoves()
       .filter((move) => !board.isGlassComplete(move.from))
+      .filter((move) => {
+        const fromGlass = board.getGlasses()[move.from];
+        return !(fromGlass.size() === 3 && fromGlass.hasOnlySingleColorBalls());
+      })
       .map((move) => {
         const newBoard = board.clone();
         newBoard.moveBall(move);

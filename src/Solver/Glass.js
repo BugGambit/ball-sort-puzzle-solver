@@ -35,6 +35,10 @@ class Glass {
     this.stack.push(ball);
   }
 
+  size() {
+    return this.stack.size();
+  }
+
   hasOnlySingleColorBalls() {
     const balls = this.getAllBalls();
     for (let i = 1; i < balls.length; i += 1) {
