@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import Configurator from "../Configurator/Configurator";
 import Solution from "../Solution/Solution";
@@ -112,7 +114,12 @@ function App() {
     const board = new Board(glasses);
     const report = Solver(board);
     if (!report.isSolvable) {
-      throw Error("Board not solvable");
+      toast.error("This board is not solvable...", {
+        position: toast.POSITION.TOP_RIGHT,
+        autoClose: 5000,
+        hideProgressBar: true,
+      });
+      return;
     }
     setMoveIndex(0);
     setMoves(report.moves);
@@ -142,6 +149,7 @@ function App() {
 
   return (
     <div className="App">
+      <ToastContainer />
       {stage === STAGE_CONFIGURATION ? (
         <Configurator
           colors={colors}
