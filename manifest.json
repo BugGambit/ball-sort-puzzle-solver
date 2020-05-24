@@ -1,0 +1,25 @@
+{
+  "short_name": "Puzzle Solver",
+  "name": "Ball Sort Puzzle Solver",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo243x249.png",
+      "type": "image/png",
+      "sizes": "243x249"
+    },
+    {
+      "src": "logo485x496.png",
+      "type": "image/png",
+      "sizes": "485x496"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
