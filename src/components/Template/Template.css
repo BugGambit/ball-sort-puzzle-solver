@@ -8,6 +8,7 @@
 
 .Template .TestTubesWrapper {
   flex-grow: 1;
+  max-width: 600px;
 }
 
 .Template .SidepanelWrapper {
