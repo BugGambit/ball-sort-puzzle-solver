@@ -1,5 +1,5 @@
 .App {
-  background-image: url(/background.jpg);
+  background-image: url(%PUBLIC_URL%/background.jpg);
   background-repeat: repeat;
 
   height: 100vh;
