@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
+import ReactGA from "react-ga";
 import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import Configurator from "../Configurator/Configurator";
@@ -112,7 +113,15 @@ function App() {
 
   const onSolveHandler = () => {
     const board = new Board(glasses);
+    const startMs = Date.now();
     const report = Solver(board);
+    const endMs = Date.now();
+    ReactGA.timing({
+      value: endMs - startMs,
+      category: "Solver",
+      variable: "DFS",
+      label: `${report.isSolvable ? "Solvable" : "Unsolvable"}`,
+    });
     if (!report.isSolvable) {
       toast.error("This board is not solvable...", {
         position: toast.POSITION.TOP_RIGHT,
