@@ -6,6 +6,6 @@ This is a solver to the game [Ball Sort Puzzle](https://play.google.com/store/ap
 
 ## Try it
 
-Try it out [here](https://fredrik955.github.io/ball-sort-puzzle-solver/).
+Try it out [here](https://BugGambit.github.io/ball-sort-puzzle-solver/).
 
 ![Screenshot](./cypress/screenshots/home_screen.spec.js/home_screen.png "Home screen")
